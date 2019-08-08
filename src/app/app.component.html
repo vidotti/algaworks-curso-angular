@@ -9,11 +9,13 @@
 
     <div class="form-group">
         <label>Nome</label>
-        <input type="text" class="form-control" (input)="alterarNome($event)" value="{{nome}}">
+         <input type="text" class="form-control"
+            (input)="alterarNome($event)" value="{{nome}}">
+        <!-- <input type="text" class="form-control" #nomeInput [value]="nome"> -->
     </div>
 
-
-    <button type="button" (click)="adicionar()" class="btn btn-primary">Adicionar</button>
+    <button type="button" (click)="adicionar()"
+      [disabled]="nome.length == 0" class="btn btn-primary">Adicionar</button>
 
 
 </div>

@@ -11,20 +11,21 @@ export class AppComponent {
 
   nome = 'Victor';
 
-  adicionar() {
+  adicionar(nome: string) {
 
-    console.log(`Adicionando ${this.nome}`);
-    // console.log('Adicionando ' + this.nome);
+    this.nome = nome;
+  //   console.log(`Adicionando ${this.nome}`);
+  //   // console.log('Adicionando ' + this.nome);
 
-    const numero = Math.round(Math.random() * 100)
-    this.nome = 'João' + numero;
-  }
+  //   const numero = Math.round(Math.random() * 100)
+  //   this.nome = 'João' + numero;
+   }
 
-  alterarNome(event: any) {
+   alterarNome(event: any) {
 
-    console.log(event.target.value);
-    this.nome = event.target.value;
-  }
+     console.log(event.target.value);
+     this.nome = event.target.value;
+   }
 
 
 
