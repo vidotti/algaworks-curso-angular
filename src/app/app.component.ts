@@ -17,8 +17,8 @@ export class AppComponent {
   //   console.log(`Adicionando ${this.nome}`);
   //   // console.log('Adicionando ' + this.nome);
 
-  //   const numero = Math.round(Math.random() * 100)
-  //   this.nome = 'João' + numero;
+     const numero = Math.round(Math.random() * 100)
+     this.nome = 'João' + numero;
    }
 
    alterarNome(event: any) {

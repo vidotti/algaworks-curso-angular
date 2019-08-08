@@ -10,7 +10,8 @@
     <div class="form-group">
         <label>Nome</label>
          <input type="text" class="form-control"
-            (input)="alterarNome($event)" value="{{nome}}">
+            (input)="this.nome = $event.target.value"
+            [value]="nome">
         <!-- <input type="text" class="form-control" #nomeInput [value]="nome"> -->
     </div>
 
