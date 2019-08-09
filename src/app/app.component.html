@@ -2,7 +2,7 @@
 
 <div class="container">
 
-    <div class="alert alert-success" role="alert" [hidden]="adicionado">
+    <div class="alert alert-success" role="alert" [hidden]="!adicionado">
         Funcionário adicionado: {{teste}}
     </div>
 
@@ -18,6 +18,15 @@
 
     <button type="button" (click)="adicionar()"
       [disabled]="nome.length == 0" class="btn btn-primary">Adicionar</button>
+
+
+      <div class="row" style="margin-top: 20px">
+
+
+        <div class="col-2" *ngFor="let f of funcionarios">
+            <app-funcionario-card [obj]="f"></app-funcionario-card>
+
+      </div>
 
 
 </div>
