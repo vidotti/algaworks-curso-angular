@@ -2,16 +2,17 @@
 
 <div class="container">
 
-    <div class="alert alert-success" role="alert">
-        Funcionário adicionado: {{nome}}
+    <div class="alert alert-success" role="alert" [hidden]="adicionado">
+        Funcionário adicionado: {{teste}}
     </div>
 
 
     <div class="form-group">
         <label>Nome</label>
          <input type="text" class="form-control"
-            (input)="this.nome = $event.target.value"
-            [value]="nome">
+            [(ngModel)]="teste"
+            (focus)="adicionado = false">
+
         <!-- <input type="text" class="form-control" #nomeInput [value]="nome"> -->
     </div>
 
